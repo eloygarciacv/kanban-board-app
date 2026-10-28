@@ -1,7 +1,9 @@
 import './App.css'
-import './components/NavBar'
-import './components/Sidebar'
-import './components/Footer'
+import './components/Board'
+import './components/Column'
+import './components/TaskCard'
+import './components/TaskForm'
+import tasks from "./tasks.json";
 
 function App() {
 
