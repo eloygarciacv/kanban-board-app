@@ -1,14 +1,17 @@
 import './App.css'
-import './components/Board'
-import './components/Column'
-import './components/TaskCard'
-import './components/TaskForm'
-import tasks from "./tasks.json";
+import NavBar from './components/NavBar'
+import Footer from './components/Footer'
+import Sidebar from './components/Sidebar'
 
 function App() {
 
   return (
-    <div></div>
+    <div>
+      <NavBar />
+      <Sidebar />
+      <Footer />
+    </div>
+    
   )
 }
 
