@@ -1,7 +1,6 @@
 .layout {
   display: flex;
   min-height: 80vh; /* 80% of the browser window's height. */
-
 }
 main {
   flex-grow: 1;
@@ -13,6 +12,7 @@ nav {
   display: flex;
   flex-direction: column;
   gap: 12px;
+  height: 100%;
 }
 nav a {
   text-decoration: none;
@@ -23,5 +23,4 @@ nav a {
 nav a:hover {
   color: #000000;
   background-color: #e5e5e5;
-
 }
