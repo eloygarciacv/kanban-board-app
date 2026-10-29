@@ -1,3 +1,5 @@
+import { Link } from "react-router-dom";
+
 function Sidebar() {
   return (
     <>
@@ -6,8 +8,8 @@ function Sidebar() {
           <h1>Kanban Board</h1>
         </div>
         <nav>
-          <a href="#">Home</a>
-          <a href="#">About</a>
+          <Link to="/">Home</Link>
+          <Link to="/about">About</Link>
         </nav>
         <footer>
           <a href="https://github.com/eloygarciacv/kanban-board-app">

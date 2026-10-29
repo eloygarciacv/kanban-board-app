@@ -6,13 +6,11 @@ function TaskList(props) {
       <h2>Task List</h2>
 
       {props.tasks.map((task) => (
-        <TaskCard
-          key={task.id}
-          task={task}
-          onDelete={props.onDelete}
-        />
+        <TaskCard key={task.id} task={task} onDelete={props.onDelete} />
       ))}
     </div>
+
+    // TO-DO: Add 3 Lists for to-do, in progress and done that filter by task.status
   );
 }
 

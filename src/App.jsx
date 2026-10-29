@@ -1,8 +1,13 @@
 import "./App.css";
-import Sidebar from "./components/Sidebar";
 import tasks from "./data/tasks.json";
-import { useState } from "react";
+
+import Sidebar from "./components/Sidebar";
 import TaskList from "./components/TaskList";
+import About from "./pages/About";
+
+import { Routes, Route } from "react-router-dom";
+
+import { useState } from "react";
 
 function App() {
   const [taskList, setTaskList] = useState(tasks);
@@ -14,8 +19,15 @@ function App() {
     <div>
       <div className="layout">
         <Sidebar />
+
         <main>
-          <TaskList tasks={taskList} onDelete={handleDelete} />
+          <Routes>
+            <Route
+              path="/"
+              element={<TaskList tasks={taskList} onDelete={handleDelete} />}
+            />
+            <Route path="/about" element={<About />} />
+          </Routes>
         </main>
       </div>
     </div>
