@@ -1,7 +1,7 @@
 function TaskCard(props) {
   return (
-    <div>
-      <h3>{props.task.title}</h3>
+    <div className="task-card">
+      <h3 className="task-title">{props.task.title}</h3>
       <p>{props.task.priority === "High"
             ? "🔴"
             : props.task.priority === "Medium"

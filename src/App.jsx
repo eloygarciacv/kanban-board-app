@@ -4,6 +4,7 @@ import tasks from "./data/tasks.json";
 import Sidebar from "./components/Sidebar";
 import TaskList from "./components/TaskList";
 import About from "./pages/About";
+import Dashboard from "./pages/Dashboard";
 
 import { Routes, Route } from "react-router-dom";
 
@@ -24,7 +25,7 @@ function App() {
           <Routes>
             <Route
               path="/"
-              element={<TaskList tasks={taskList} onDelete={handleDelete} />}
+              element={<Dashboard tasks={taskList} onDelete={handleDelete} />}
             />
             <Route path="/about" element={<About />} />
           </Routes>
