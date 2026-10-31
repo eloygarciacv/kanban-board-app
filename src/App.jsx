@@ -2,7 +2,6 @@ import "./App.css";
 import tasks from "./data/tasks.json";
 
 import Sidebar from "./components/Sidebar";
-import TaskList from "./components/TaskList";
 import About from "./pages/About";
 import Dashboard from "./pages/Dashboard";
 import TaskDetails from "./pages/TaskDetails";
@@ -10,6 +9,7 @@ import TaskDetails from "./pages/TaskDetails";
 import { Routes, Route } from "react-router-dom";
 
 import { useState } from "react";
+import NotFound from "./pages/NotFound";
 
 function App() {
   const [taskList, setTaskList] = useState(tasks);
@@ -35,6 +35,8 @@ function App() {
             />
 
             <Route path="/about" element={<About />} />
+
+            <Route path="*" element={<NotFound />} />
           </Routes>
         </main>
       </div>

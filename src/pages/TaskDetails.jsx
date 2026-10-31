@@ -1,4 +1,5 @@
 import { Link, useParams } from "react-router-dom";
+import NotFound from "./NotFound";
 
 function TaskDetails({ tasks }) {
   const params = useParams();
@@ -6,6 +7,10 @@ function TaskDetails({ tasks }) {
   const foundTask = tasks.find((task) => {
     return task.id === params.taskId;
   });
+
+  if (!foundTask) {
+    return <NotFound />;
+  }
 
   return (
     <article>
