@@ -3,11 +3,25 @@ import TaskList from "../components/TaskList";
 
 function Dashboard(props) {
   return (
-    <div>
+    <>
       <div className="header">
         <h1>Kanban board</h1>
-        <Link to="/task/new" className="button primary">
-          + New Task
+        <Link to="/task/new" className="button primary icon">
+          <svg
+            xmlns="http://www.w3.org/2000/svg"
+            width="16"
+            height="16"
+            viewBox="0 0 24 24"
+            fill="none"
+            stroke="currentColor"
+            strokeWidth="1.5"
+            strokeLinecap="round"
+            strokeLinejoin="round"
+          >
+            <path d="M5 12h14" />
+            <path d="M12 5v14" />
+          </svg>
+          New Task
         </Link>
       </div>
 
@@ -33,7 +47,7 @@ function Dashboard(props) {
           />
         </div>
       </div>
-    </div>
+    </>
   );
 }
 

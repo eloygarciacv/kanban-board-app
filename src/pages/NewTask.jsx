@@ -75,10 +75,26 @@ function NewTask(props) {
 
   return (
     <>
-      <Link to="/">← Back to dashboard</Link>
-      <div className="add-form container">
-        <h2>Add Form</h2>
-
+      <div className="header back">
+        <Link to="/" className="button circle">
+          <svg
+            xmlns="http://www.w3.org/2000/svg"
+            width="16"
+            height="16"
+            viewBox="0 0 24 24"
+            fill="none"
+            stroke="currentColor"
+            strokeWidth="1.5"
+            strokeLinecap="round"
+            strokeLinejoin="round"
+          >
+            <path d="m12 19-7-7 7-7" />
+            <path d="M19 12H5" />
+          </svg>
+        </Link>
+        <h2>New Task</h2>
+      </div>
+      <article>
         <form onSubmit={handleAddTask}>
           <div>
             <label htmlFor="title">Title: </label>
@@ -188,7 +204,7 @@ function NewTask(props) {
             Add
           </button>
         </form>
-      </div>
+      </article>
     </>
   );
 }

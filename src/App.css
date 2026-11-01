@@ -31,13 +31,25 @@ h1 {
   letter-spacing: -0.03rem;
 }
 
+h2 {
+  font-size: 28px;
+  letter-spacing: -0.02rem;
+}
+
 h3 {
   font-size: 16px;
   letter-spacing: -0.01rem;
 }
 
+article,
+article form {
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+}
+
 .button {
-  padding: 12px 14px;
+  padding: 8px 12px;
   background-color: var(--white-400);
   color: var(--black-900);
 
@@ -45,11 +57,25 @@ h3 {
 
   border-radius: var(--radius-l);
   corner-shape: squircle;
+
+  display: inline-flex;
+  line-height: 115%;
 }
 
 .button.primary {
   background-color: var(--black-900);
   color: var(--white-100);
+}
+
+.button.icon {
+  padding-left: 8px;
+  gap: 4px;
+}
+
+.button.circle {
+  padding: 8px;
+  border-radius: 999px;
+  corner-shape: inherit;
 }
 
 body {
@@ -149,6 +175,9 @@ main {
   border: 1px solid var(--white-400);
   border-radius: var(--radius-l);
   corner-shape: squircle;
+
+  display: flex;
+  flex-direction: column;
 }
 
 .header {
@@ -158,19 +187,25 @@ main {
   border-bottom: 1px solid var(--white-400);
   padding-bottom: 20px;
   margin-bottom: 40px;
+  min-height: 56px;
+}
+
+.header.back {
+  gap: 16px;
 }
 
 .kanban-board {
   display: grid;
   grid-template-columns: repeat(3, 1fr);
-  gap: 12px;
+  gap: 20px;
+  height: 100%;
 }
 
 .kanban-column {
-  background-color: #f5f5f7;
-  padding: 16px;
-  border-radius: 12px;
-  min-height: 500px;
+  background-color: var(--white-200);
+  padding: 20px;
+  border-radius: var(--radius-l);
+  corner-shape: squircle;
 }
 .task-card {
   background-color: white;

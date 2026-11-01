@@ -84,10 +84,26 @@ function EditTask(props) {
 
   return (
     <>
-      <Link to={`/task/${foundTask.id}`}>← Back to task</Link>
-      <div className="add-form container">
-        <h2>Edit Form</h2>
-
+      <div className="header back">
+        <Link to={`/task/${foundTask.id}`} className="button circle">
+          <svg
+            xmlns="http://www.w3.org/2000/svg"
+            width="16"
+            height="16"
+            viewBox="0 0 24 24"
+            fill="none"
+            stroke="currentColor"
+            strokeWidth="1.5"
+            strokeLinecap="round"
+            strokeLinejoin="round"
+          >
+            <path d="m12 19-7-7 7-7" />
+            <path d="M19 12H5" />
+          </svg>
+        </Link>
+        <h2>Edit task</h2>
+      </div>
+      <article>
         <form onSubmit={handleEditTask}>
           <div>
             <label htmlFor="title">Title: </label>
@@ -203,7 +219,7 @@ function EditTask(props) {
             Cancel
           </button>
         </form>
-      </div>
+      </article>
     </>
   );
 }
