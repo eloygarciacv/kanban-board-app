@@ -33,35 +33,33 @@ function App() {
   };
 
   return (
-    <div>
-      <div className="layout">
-        <Sidebar />
+    <div className="app-shell">
+      <Sidebar />
 
-        <main>
-          <Routes>
-            <Route
-              path="/"
-              element={<Dashboard tasks={taskList} setTaskList={setTaskList} />}
-            />
-            <Route
-              path="/task/:taskId"
-              element={<TaskDetails tasks={taskList} onDelete={handleDelete} />}
-            />
-            <Route
-              path="/task/:taskId/edit"
-              element={<EditTask tasks={taskList} onUpdate={handleUpdate} />}
-            />
-            <Route
-              path="/task/new"
-              element={<NewTask tasks={taskList} setTaskList={setTaskList} />}
-            />
+      <main>
+        <Routes>
+          <Route
+            path="/"
+            element={<Dashboard tasks={taskList} setTaskList={setTaskList} />}
+          />
+          <Route
+            path="/task/:taskId"
+            element={<TaskDetails tasks={taskList} onDelete={handleDelete} />}
+          />
+          <Route
+            path="/task/:taskId/edit"
+            element={<EditTask tasks={taskList} onUpdate={handleUpdate} />}
+          />
+          <Route
+            path="/task/new"
+            element={<NewTask tasks={taskList} setTaskList={setTaskList} />}
+          />
 
-            <Route path="/about" element={<About />} />
+          <Route path="/about" element={<About />} />
 
-            <Route path="*" element={<NotFound />} />
-          </Routes>
-        </main>
-      </div>
+          <Route path="*" element={<NotFound />} />
+        </Routes>
+      </main>
     </div>
   );
 }

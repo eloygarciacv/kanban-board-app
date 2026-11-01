@@ -4,8 +4,12 @@ import TaskList from "../components/TaskList";
 function Dashboard(props) {
   return (
     <div>
-      <h1>Dashboard</h1>
-      <Link to="/task/new">New task</Link>
+      <div className="header">
+        <h1>Kanban board</h1>
+        <Link to="/task/new" className="button primary">
+          + New Task
+        </Link>
+      </div>
 
       <div className="kanban-board">
         <div className="kanban-column">
