@@ -33,6 +33,7 @@ h1 {
 
 h3 {
   font-size: 16px;
+  letter-spacing: -0.01rem;
 }
 
 .button {
@@ -119,9 +120,19 @@ nav li:hover {
   background-color: var(--white-400);
 }
 
+nav a.active li {
+  background-color: var(--white-400);
+}
+
 nav li.inactive {
   cursor: not-allowed;
   opacity: 20%;
+}
+
+nav li.title p {
+  font-size: 10px;
+  text-transform: uppercase;
+  letter-spacing: 0.02rem;
 }
 
 nav li.title:hover {

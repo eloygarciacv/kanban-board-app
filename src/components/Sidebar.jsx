@@ -1,4 +1,4 @@
-import { Link } from "react-router-dom";
+import { Link, NavLink } from "react-router-dom";
 
 function Sidebar() {
   return (
@@ -34,7 +34,7 @@ function Sidebar() {
             <li className="title">
               <p>Planner</p>
             </li>
-            <Link to="/">
+            <NavLink to="/">
               <li>
                 <svg
                   xmlns="http://www.w3.org/2000/svg"
@@ -54,7 +54,7 @@ function Sidebar() {
                 </svg>
                 <p>Kanban board</p>
               </li>
-            </Link>
+            </NavLink>
             <li className="inactive">
               <svg
                 xmlns="http://www.w3.org/2000/svg"
@@ -93,7 +93,7 @@ function Sidebar() {
         </nav>
         <nav>
           <ul>
-            <Link to="/about">
+            <NavLink to="/about">
               <li>
                 <svg
                   xmlns="http://www.w3.org/2000/svg"
@@ -112,7 +112,7 @@ function Sidebar() {
                 </svg>
                 <p>About</p>
               </li>
-            </Link>
+            </NavLink>
           </ul>
         </nav>
       </aside>
