@@ -5,7 +5,7 @@ function Dashboard(props) {
   return (
     <div>
       <h1>Dashboard</h1>
-      <Link to="/tasks/new">New task</Link>
+      <Link to="/task/new">New task</Link>
 
       <div className="kanban-board">
         <div className="kanban-column">

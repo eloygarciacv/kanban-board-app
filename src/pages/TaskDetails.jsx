@@ -44,7 +44,9 @@ function TaskDetails(props) {
         <dd>{foundTask.dueDate}</dd>
       </dl>
 
-      <Link to={`/tasks/${foundTask.id}/edit`}>Edit</Link>
+      <button onClick={() => navigate(`/task/${foundTask.id}/edit`)}>
+        Edit
+      </button>
       <button onClick={handleTaskDelete}>Delete</button>
     </article>
   );

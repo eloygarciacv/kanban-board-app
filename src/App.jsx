@@ -44,15 +44,15 @@ function App() {
               element={<Dashboard tasks={taskList} setTaskList={setTaskList} />}
             />
             <Route
-              path="/tasks/:taskId"
+              path="/task/:taskId"
               element={<TaskDetails tasks={taskList} onDelete={handleDelete} />}
             />
             <Route
-              path="/tasks/:taskId/edit"
+              path="/task/:taskId/edit"
               element={<EditTask tasks={taskList} onUpdate={handleUpdate} />}
             />
             <Route
-              path="/tasks/new"
+              path="/task/new"
               element={<NewTask tasks={taskList} setTaskList={setTaskList} />}
             />
 
