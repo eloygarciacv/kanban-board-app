@@ -1,10 +1,11 @@
+import { Link } from "react-router-dom";
 import TaskList from "../components/TaskList";
-import NewTask from "../components/NewTask";
 
 function Dashboard(props) {
   return (
     <div>
       <h1>Dashboard</h1>
+      <Link to="/tasks/new">New task</Link>
 
       <div className="kanban-board">
         <div className="kanban-column">
@@ -28,8 +29,6 @@ function Dashboard(props) {
           />
         </div>
       </div>
-
-      <NewTask tasks={props.tasks} setTaskList={props.setTaskList} />
     </div>
   );
 }

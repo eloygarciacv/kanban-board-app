@@ -1,6 +1,9 @@
 import { useState } from "react";
+import { useNavigate } from "react-router-dom";
 
 function NewTask(props) {
+  const navigate = useNavigate();
+
   // useState for each object field
   const [titleValue, setTitleValue] = useState("");
   const [descriptionValue, setDescriptionValue] = useState("");
@@ -66,6 +69,8 @@ function NewTask(props) {
     setPriorityValue("Low");
     setCreatedDateValue("");
     setDueDateValue("");
+
+    navigate("/");
   };
 
   return (
