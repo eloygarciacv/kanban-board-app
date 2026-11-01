@@ -5,6 +5,7 @@ import Sidebar from "./components/Sidebar";
 import About from "./pages/About";
 import Dashboard from "./pages/Dashboard";
 import TaskDetails from "./pages/TaskDetails";
+import EditTask from "./pages/EditTask";
 import NewTask from "./pages/NewTask";
 
 import { Routes, Route } from "react-router-dom";
@@ -17,6 +18,18 @@ function App() {
 
   const handleDelete = (id) => {
     setTaskList(taskList.filter((task) => task.id !== id));
+  };
+
+  const handleUpdate = (editedTask) => {
+    const updatedTaskList = taskList.map((task) => {
+      if (task.id === editedTask.id) {
+        return editedTask;
+      }
+
+      return task;
+    });
+
+    setTaskList(updatedTaskList);
   };
 
   return (
@@ -33,6 +46,10 @@ function App() {
             <Route
               path="/tasks/:taskId"
               element={<TaskDetails tasks={taskList} onDelete={handleDelete} />}
+            />
+            <Route
+              path="/tasks/:taskId/edit"
+              element={<EditTask tasks={taskList} onUpdate={handleUpdate} />}
             />
             <Route
               path="/tasks/new"
