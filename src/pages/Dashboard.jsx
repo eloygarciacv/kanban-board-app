@@ -11,7 +11,6 @@ function Dashboard(props) {
           <h3>To Do</h3>
           <TaskList
             tasks={props.tasks.filter((task) => task.status === "To Do")}
-            onDelete={props.onDelete}
           />
         </div>
 
@@ -19,7 +18,6 @@ function Dashboard(props) {
           <h3>In Progress</h3>
           <TaskList
             tasks={props.tasks.filter((task) => task.status === "In Progress")}
-            onDelete={props.onDelete}
           />
         </div>
 
@@ -27,7 +25,6 @@ function Dashboard(props) {
           <h3>Done</h3>
           <TaskList
             tasks={props.tasks.filter((task) => task.status === "Done")}
-            onDelete={props.onDelete}
           />
         </div>
       </div>

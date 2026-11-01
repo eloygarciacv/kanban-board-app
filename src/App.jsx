@@ -27,17 +27,11 @@ function App() {
           <Routes>
             <Route
               path="/"
-              element={
-                <Dashboard
-                  tasks={taskList}
-                  onDelete={handleDelete}
-                  setTaskList={setTaskList}
-                />
-              }
+              element={<Dashboard tasks={taskList} setTaskList={setTaskList} />}
             />
             <Route
               path="/tasks/:taskId"
-              element={<TaskDetails tasks={taskList} />}
+              element={<TaskDetails tasks={taskList} onDelete={handleDelete} />}
             />
 
             <Route path="/about" element={<About />} />

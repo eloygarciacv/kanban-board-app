@@ -37,6 +37,7 @@ function NewTask(props) {
   const handleAddTask = (e) => {
     e.preventDefault();
 
+    // workaroud for the id numbers since using "id: String(props.taks.lenght + 1)" created issues when you delete taks and add more later
     const lastTask = props.tasks[props.tasks.length - 1];
     const nextId = lastTask ? Number(lastTask.id) + 1 : 1;
 

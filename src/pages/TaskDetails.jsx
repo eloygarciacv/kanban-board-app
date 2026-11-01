@@ -1,16 +1,23 @@
-import { Link, useParams } from "react-router-dom";
+import { Link, useParams, useNavigate } from "react-router-dom";
 import NotFound from "./NotFound";
 
-function TaskDetails({ tasks }) {
-  const params = useParams();
+function TaskDetails(props) {
+  const { taskId } = useParams();
+  const navigate = useNavigate();
 
-  const foundTask = tasks.find((task) => {
-    return task.id === params.taskId;
+  const foundTask = props.tasks.find((task) => {
+    return task.id === taskId;
   });
 
   if (!foundTask) {
     return <NotFound />;
   }
+
+  // needed to navigate after deleting or i would stay in a not found page
+  const handleTaskDelete = () => {
+    props.onDelete(foundTask.id);
+    navigate("/");
+  };
 
   return (
     <article>
@@ -36,6 +43,8 @@ function TaskDetails({ tasks }) {
         <dt>Due date</dt>
         <dd>{foundTask.dueDate}</dd>
       </dl>
+
+      <button onClick={handleTaskDelete}>Delete</button>
     </article>
   );
 }

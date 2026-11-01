@@ -2,10 +2,8 @@ import { Link } from "react-router-dom";
 
 function TaskCard(props) {
   return (
-    <div className="task-card">
-      <Link to={`/tasks/${props.task.id}`}>
-        <h3>{props.task.title}</h3>
-      </Link>
+    <Link to={`/tasks/${props.task.id}`} className="task-card">
+      <h3>{props.task.title}</h3>
       <p>
         {props.task.priority === "High"
           ? "🔴"
@@ -13,8 +11,7 @@ function TaskCard(props) {
             ? "🟡"
             : "🟢"}
       </p>
-      <button onClick={() => props.onDelete(props.task.id)}>Delete</button>
-    </div>
+    </Link>
   );
 }
 
