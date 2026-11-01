@@ -59,7 +59,8 @@ article form {
   corner-shape: squircle;
 
   display: inline-flex;
-  line-height: 115%;
+  align-items: center;
+  line-height: 1;
 }
 
 .button.primary {
