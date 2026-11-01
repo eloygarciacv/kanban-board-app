@@ -5,7 +5,7 @@ function Sidebar() {
     <>
       <aside>
         <div>
-          <h1>Kanban Board</h1>
+          <h1>Logo</h1>
         </div>
         <nav>
           <Link to="/">Home</Link>

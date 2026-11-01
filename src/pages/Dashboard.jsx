@@ -1,4 +1,5 @@
 import TaskList from "../components/TaskList";
+import NewTask from "../components/NewTask";
 
 function Dashboard(props) {
   return (
@@ -8,28 +9,30 @@ function Dashboard(props) {
       <div className="kanban-board">
         <div className="kanban-column">
           <h3>To Do</h3>
-           <TaskList
-    tasks={props.tasks.filter((task) => task.status === "To Do")}
-    onDelete={props.onDelete}
-  />
+          <TaskList
+            tasks={props.tasks.filter((task) => task.status === "To Do")}
+            onDelete={props.onDelete}
+          />
         </div>
 
         <div className="kanban-column">
           <h3>In Progress</h3>
           <TaskList
-    tasks={props.tasks.filter((task) => task.status === "In Progress")}
-    onDelete={props.onDelete}
-  />
+            tasks={props.tasks.filter((task) => task.status === "In Progress")}
+            onDelete={props.onDelete}
+          />
         </div>
 
         <div className="kanban-column">
           <h3>Done</h3>
           <TaskList
-  tasks={props.tasks.filter((task) => task.status === "Done")}
-  onDelete={props.onDelete}
-/>
+            tasks={props.tasks.filter((task) => task.status === "Done")}
+            onDelete={props.onDelete}
+          />
         </div>
       </div>
+
+      <NewTask tasks={props.tasks} setTaskList={props.setTaskList} />
     </div>
   );
 }
