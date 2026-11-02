@@ -41,7 +41,7 @@ function TaskDetails(props) {
         <h2>Task details</h2>
       </div>
       <article>
-        <h3>{foundTask.title}</h3>
+        <h3 className="task-details-title">{foundTask.title}</h3>
 
         <p>{foundTask.description}</p>
 
@@ -62,10 +62,18 @@ function TaskDetails(props) {
           <dd>{foundTask.dueDate}</dd>
         </dl>
 
-        <button onClick={() => navigate(`/task/${foundTask.id}/edit`)}>
-          Edit
-        </button>
-        <button onClick={handleTaskDelete}>Delete</button>
+        <div className="task-actions">
+  <button
+    className="edit-button"
+    onClick={() => navigate(`/task/${foundTask.id}/edit`)}
+  >
+    Edit
+  </button>
+
+  <button className="delete-button" onClick={handleTaskDelete}>
+    Delete
+  </button>
+</div>
       </article>
     </>
   );

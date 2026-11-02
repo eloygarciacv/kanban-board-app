@@ -7,6 +7,7 @@ import Dashboard from "./pages/Dashboard";
 import TaskDetails from "./pages/TaskDetails";
 import EditTask from "./pages/EditTask";
 import NewTask from "./pages/NewTask";
+import Calendar from "./pages/Calendar";
 
 import { Routes, Route } from "react-router-dom";
 
@@ -58,6 +59,7 @@ function App() {
           <Route path="/about" element={<About />} />
 
           <Route path="*" element={<NotFound />} />
+          <Route path="/calendar" element={<Calendar />} />
         </Routes>
       </main>
     </div>

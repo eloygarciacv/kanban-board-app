@@ -55,7 +55,7 @@ function Sidebar() {
                 <p>Kanban board</p>
               </li>
             </NavLink>
-            <li className="inactive">
+            <li className="">
               <svg
                 xmlns="http://www.w3.org/2000/svg"
                 width="16"
@@ -78,7 +78,9 @@ function Sidebar() {
                 <path d="M12 17h.01" />
                 <path d="M16 17h.01" />
               </svg>
-              <p>Calendar</p>
+              <NavLink to="/calendar">
+                <li>Calendar</li>
+                  </NavLink>
             </li>
           </ul>
 

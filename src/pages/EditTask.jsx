@@ -199,25 +199,29 @@ function EditTask(props) {
             />
           </div>
 
-          <button
-            disabled={
-              !titleValue ||
-              !descriptionValue ||
-              !assigneeValue ||
-              !statusValue ||
-              !priorityValue ||
-              !createdDateValue ||
-              !dueDateValue
-            }
-          >
-            Save
-          </button>
-          <button
-            type="button"
-            onClick={() => navigate(`/task/${foundTask.id}`)}
-          >
-            Cancel
-          </button>
+          <div className="form-actions">
+  <button
+    disabled={
+      !titleValue ||
+      !descriptionValue ||
+      !assigneeValue ||
+      !statusValue ||
+      !priorityValue ||
+      !createdDateValue ||
+      !dueDateValue
+    }
+  >
+    Save
+  </button>
+
+  <button
+    type="button"
+    className="cancel-button"
+    onClick={() => navigate(`/task/${foundTask.id}`)}
+  >
+    Cancel
+  </button>
+</div>
         </form>
       </article>
     </>
