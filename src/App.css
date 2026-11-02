@@ -500,3 +500,65 @@ article form > .form-actions {
 .calendar-navigation button:hover {
   background-color: var(--white-400);
 }
+
+.calendar-grid {
+  display: grid;
+  grid-template-columns: repeat(7, 1fr);
+  gap: 8px;
+}
+
+.calendar-weekday {
+  text-align: center;
+  padding: 12px;
+  font-weight: 600;
+  color: var(--black-800);
+}
+
+.calendar-day {
+  background-color: var(--white-300);
+  border: 1px solid var(--white-400);
+  border-radius: var(--radius-s);
+  padding: 12px;
+  min-height: 100px;
+
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+}
+
+.calendar-task {
+  background-color: var(--white-100);
+  border: 1px solid var(--white-400);
+  border-radius: var(--radius-s);
+  padding: 6px 8px;
+
+  color: var(--black-900);
+  text-decoration: none;
+  font-size: 12px;
+  overflow-wrap: anywhere;
+
+  transition: background-color 0.2s ease;
+}
+
+.calendar-task:hover {
+  background-color: var(--white-400);
+}
+
+.calendar-navigation {
+  display: flex;
+  align-items: center;
+  gap: 16px;
+}
+
+.calendar-navigation button {
+  background-color: var(--white-300);
+  border: 1px solid var(--white-400);
+  border-radius: var(--radius-s);
+  padding: 8px 12px;
+  cursor: pointer;
+  transition: background-color 0.2s ease;
+}
+
+.calendar-navigation button:hover {
+  background-color: var(--white-400);
+}

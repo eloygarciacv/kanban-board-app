@@ -55,11 +55,12 @@ function App() {
             path="/task/new"
             element={<NewTask tasks={taskList} setTaskList={setTaskList} />}
           />
-
           <Route path="/about" element={<About />} />
-
           <Route path="*" element={<NotFound />} />
-          <Route path="/calendar" element={<Calendar />} />
+          <Route
+            path="/calendar"
+            element={<Calendar tasks={taskList} />}
+          />{" "}
         </Routes>
       </main>
     </div>
