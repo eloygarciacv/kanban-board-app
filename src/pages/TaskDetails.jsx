@@ -22,7 +22,13 @@ function TaskDetails(props) {
   return (
     <>
       <div className="header back">
-        <Link to="/" className="button circle">
+        <Link
+          onClick={(event) => {
+            event.preventDefault();
+            navigate(-1);
+          }}
+          className="button circle"
+        >
           <svg
             xmlns="http://www.w3.org/2000/svg"
             width="16"
