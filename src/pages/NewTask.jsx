@@ -45,7 +45,7 @@ function NewTask(props) {
     const nextId = lastTask ? Number(lastTask.id) + 1 : 1;
 
     const newTask = {
-      id: String(nextId),
+      id: String(nextId), // crypto.randomUUID()
       title: titleValue,
       description: descriptionValue,
       assignee: assigneeValue,

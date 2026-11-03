@@ -63,17 +63,17 @@ function TaskDetails(props) {
         </dl>
 
         <div className="task-actions">
-  <button
-    className="edit-button"
-    onClick={() => navigate(`/task/${foundTask.id}/edit`)}
-  >
-    Edit
-  </button>
+          <button
+            className="edit-button"
+            onClick={() => navigate(`/task/${foundTask.id}/edit`)}
+          >
+            Edit
+          </button>
 
-  <button className="delete-button" onClick={handleTaskDelete}>
-    Delete
-  </button>
-</div>
+          <button className="delete-button" onClick={handleTaskDelete}>
+            Delete
+          </button>
+        </div>
       </article>
     </>
   );
