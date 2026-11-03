@@ -227,8 +227,9 @@ main {
   align-items: center;
   justify-content: space-between;
   gap: 12px;
-  transition: box-shadow 0.2s ease, transform 0.2s ease;
-
+  transition:
+    box-shadow 0.2s ease,
+    transform 0.2s ease;
 }
 .task-card:hover {
   box-shadow: 0 4px 12px rgba(0, 0, 0, 0.06);
@@ -300,11 +301,12 @@ article dd {
 
 .delete-button {
   background-color: var(--white-300);
-  color: var(--red-900);
+  color: var(--black-800);
 }
 
 .delete-button:hover {
   background-color: var(--white-400);
+  color: var(--black-800);
 }
 
 .task-actions {
@@ -350,9 +352,11 @@ article form select {
   color: var(--black-900);
   font-family: inherit;
   font-size: 14px;
+  text-box: initial;
   outline: none;
   transition: border-color 0.2s ease;
 }
+
 article form input:focus,
 article form select:focus {
   border-color: var(--black-800);
@@ -372,9 +376,6 @@ article form button {
   cursor: pointer;
   align-self: flex-start;
   transition: background-color 0.2s ease;
-}
-article form button:hover:not(:disabled) {
-  background-color: var(--black-800);
 }
 
 article form button:disabled {
@@ -405,10 +406,6 @@ article form > .form-actions {
 /*About page*/
 
 .about-section {
-  background-color: var(--white-300);
-  border: 1px solid var(--white-400);
-  border-radius: var(--radius-m);
-  padding: 24px;
   max-width: 700px;
 
   display: flex;
@@ -561,4 +558,9 @@ article form > .form-actions {
 
 .calendar-navigation button:hover {
   background-color: var(--white-400);
+}
+
+section p {
+  font-size: 16px;
+  margin-bottom: 14px;
 }

@@ -85,7 +85,13 @@ function EditTask(props) {
   return (
     <>
       <div className="header back">
-        <Link to={`/task/${foundTask.id}`} className="button circle">
+        <Link
+          onClick={(event) => {
+            event.preventDefault();
+            navigate(-1);
+          }}
+          className="button circle"
+        >
           <svg
             xmlns="http://www.w3.org/2000/svg"
             width="16"
@@ -200,28 +206,32 @@ function EditTask(props) {
           </div>
 
           <div className="form-actions">
-  <button
-    disabled={
-      !titleValue ||
-      !descriptionValue ||
-      !assigneeValue ||
-      !statusValue ||
-      !priorityValue ||
-      !createdDateValue ||
-      !dueDateValue
-    }
-  >
-    Save
-  </button>
+            <button
+              className="edit-button"
+              disabled={
+                !titleValue ||
+                !descriptionValue ||
+                !assigneeValue ||
+                !statusValue ||
+                !priorityValue ||
+                !createdDateValue ||
+                !dueDateValue
+              }
+            >
+              Save
+            </button>
 
-  <button
-    type="button"
-    className="cancel-button"
-    onClick={() => navigate(`/task/${foundTask.id}`)}
-  >
-    Cancel
-  </button>
-</div>
+            <button
+              type="button"
+              className="delete-button"
+              onClick={(event) => {
+                event.preventDefault();
+                navigate(-1);
+              }}
+            >
+              Cancel
+            </button>
+          </div>
         </form>
       </article>
     </>

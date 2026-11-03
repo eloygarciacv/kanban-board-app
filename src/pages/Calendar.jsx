@@ -1,4 +1,3 @@
-
 import { useState } from "react";
 import { Link } from "react-router-dom";
 
@@ -12,15 +11,7 @@ function Calendar(props) {
   const daysInMonth = new Date(year, month + 1, 0).getDate();
 
   // Weekday headings
-  const weekDays = [
-    "Mon",
-    "Tue",
-    "Wed",
-    "Thu",
-    "Fri",
-    "Sat",
-    "Sun",
-  ];
+  const weekDays = ["Mon", "Tue", "Wed", "Thu", "Fri", "Sat", "Sun"];
 
   // Format the month and year
   const currentMonth = currentDate.toLocaleString("en-US", {
@@ -29,10 +20,7 @@ function Calendar(props) {
   });
 
   // Generate an array with all days of the month
-  const days = Array.from(
-    { length: daysInMonth },
-    (_, index) => index + 1
-  );
+  const days = Array.from({ length: daysInMonth }, (_, index) => index + 1);
 
   // Calculate the weekday on which the month starts
   const firstDayOfMonth = new Date(year, month, 1).getDay();
@@ -75,7 +63,7 @@ function Calendar(props) {
         ))}
         {/* Display the days of the month */}
         {days.map((day) => {
-          // Format date 
+          // Format date
           const date = `${year}-${String(month + 1).padStart(2, "0")}-${String(day).padStart(2, "0")}`;
 
           // Find tasks due on this date
