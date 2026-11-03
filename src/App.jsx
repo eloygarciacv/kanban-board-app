@@ -13,6 +13,7 @@ import { Routes, Route } from "react-router-dom";
 
 import { useState } from "react";
 import NotFound from "./pages/NotFound";
+import Team from "./pages/Team";
 
 function App() {
   const [taskList, setTaskList] = useState(tasks);
@@ -55,12 +56,10 @@ function App() {
             path="/task/new"
             element={<NewTask tasks={taskList} setTaskList={setTaskList} />}
           />
+          <Route path="/calendar" element={<Calendar tasks={taskList} />} />
+          <Route path="/team" element={<Team tasks={taskList} />} />
           <Route path="/about" element={<About />} />
           <Route path="*" element={<NotFound />} />
-          <Route
-            path="/calendar"
-            element={<Calendar tasks={taskList} />}
-          />{" "}
         </Routes>
       </main>
     </div>

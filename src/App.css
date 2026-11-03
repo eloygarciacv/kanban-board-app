@@ -564,3 +564,30 @@ section p {
   font-size: 16px;
   margin-bottom: 14px;
 }
+
+.team-list {
+  display: flex;
+  flex-direction: column;
+}
+
+.team-row {
+  display: grid;
+  grid-template-columns: 200px minmax(0, 1fr);
+  gap: 24px;
+  padding: 20px 0;
+  border-bottom: 1px solid var(--white-400);
+}
+
+.team-member-info h2 {
+  margin-top: 6px;
+  font-size: 21px;
+}
+
+.team-member-info p,
+.team-member-tasks > p {
+  margin-top: 12px;
+}
+
+.team-member-tasks .task-card:last-child {
+  margin-bottom: 0;
+}
